@@ -1,25 +1,17 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import Poll from './compnents/ui/Poll'
+
 
 class App extends Component {
-  render() {
+render() {  
     return (
       <div className="App">
         <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
+          <h2>Vote for winner... chose your option.</h2>
         </header>
+        <Poll/>
+        <p className="shortcuts">KeyBoard ShortCuts : -A Wins: <kbd>A/a</kbd>- B Wins: <kbd>B/b</kbd>-Draw <kbd>D/d</kbd>-Vote (send)<kbd>Enter</kbd>.</p>
       </div>
     );
   }

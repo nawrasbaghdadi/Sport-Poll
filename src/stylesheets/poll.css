@@ -1,0 +1,241 @@
+:root {
+  --win-bg-color: #2ECC71;
+  --draw-bg-color: #D91E18;
+  --main-yellow: #ffdc12;
+}
+
+.main-container {
+  background-color: #333;
+  min-height: 100vh;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  box-shadow: 66vw 0 45vw 0 rgba(42, 42, 41, .75) inset
+}
+
+.football {
+  background-image: url('./gfx/football.jpg');
+}
+
+.tennis {
+  background-image: url('./gfx/tennis.jpg');
+}
+
+.snooker {
+  background-image: url('./gfx/snooker.jpg');
+}
+
+.handball {
+  background-image: url('./gfx/handball.jpg');
+}
+
+.ice_hockey {
+  background-image: url('./gfx/ice_hockey.jpg');
+}
+
+.choices {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 50px auto 0;
+
+}
+
+.choices div {
+  flex: 0 0 30%;
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.choices div:hover {
+  color: var(--main-yellow);
+  outline: none;
+}
+
+.choices div:focus,
+.btn-submit:focus {
+  outline: none;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+svg {
+  fill: #fff;
+}
+
+input[type="radio"]~label {
+  cursor: pointer;
+  border: 1px solid var(--main-yellow);
+}
+
+input[type="radio"]~.icon {
+  display: none;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  background: white;
+  border-radius: 50%;
+  background: green;
+  padding: 3px;
+}
+
+input[type="radio"]:checked~.icon {
+  display: inline;
+}
+
+input[type="radio"]:checked+label {
+  background: var(--win-bg-color);
+  color: #fff;
+}
+
+input[type="radio"]#draw:checked+label {
+  background: var(--draw-bg-color);
+}
+
+label {
+  display: block;
+}
+
+h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1.4em;
+  padding: 0.83em;
+  text-shadow: 1px 1px #222;
+}
+
+.btn-submit {
+  width: 240px;
+  height: 50px;
+  line-height: 43px;
+  border-radius: 30px;
+  border: 3px solid var(--main-yellow);
+  text-align: center;
+  color: var(--main-yellow);
+  margin: 10% auto;
+  background: #222;
+  font-size: 1.3em;
+  outline: none;
+  cursor: pointer;
+}
+
+.random {
+  font-size: smaller;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 150px 0 0 0;
+  margin: 0 auto;
+  width: 80%;
+
+}
+
+.info>div {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  color: #fff;
+}
+
+.info div span {
+  padding: 0 0 10px 0;
+  line-height: 20px;
+}
+
+.info div span:first-child {
+  color: #ffdc12;
+  font-weight: bold;
+}
+
+.choices .mod-icon {
+  display: inline-block;
+  width: 45px;
+  height: 28px;
+  position: absolute;
+}
+
+.a.wins .mod-icon {
+  background: url('./gfx/happy.svg') center no-repeat;
+}
+
+.a.loses .mod-icon {
+  background: url('./gfx/unhappy.svg') center no-repeat;
+}
+
+.b.loses .mod-icon {
+  background: url('./gfx/quiet.svg') center no-repeat;
+}
+
+.b.wins .mod-icon {
+  background: url('./gfx/happy.svg') center no-repeat;
+}
+
+.d.wins .mod-icon {
+  background: url('./gfx/happy.svg') center no-repeat;
+}
+
+.d.loses .mod-icon {
+  background: url('./gfx/surprised.svg') center no-repeat;
+}
+
+.flag {
+  width: 48px;
+  height: 48px;
+  background: url('./gfx/flags.png') no-repeat;
+  display: inline-block;
+  align-self: center;
+  padding: 0 !important;
+}
+
+.sweden {
+  background-position: -624px -528px;
+}
+
+.france {
+  background-position: -384px -192px;
+}
+
+.england {
+  background-position: -480px -192px;
+}
+
+.loading {
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: rgba(0, 0, 0, 0.4) url('./gfx/loader.gif') center no-repeat;
+}
+
+@media only screen and (max-width: 600px) {
+  .App-header {
+    top: 40px;
+    font-size: 20px;
+  }
+
+  .main-container {
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  .choices {
+    flex-direction: column;
+  }
+
+  .shortcuts {
+    display: none;
+  }
+}

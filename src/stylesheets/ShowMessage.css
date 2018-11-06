@@ -1,0 +1,26 @@
+.show-message {
+    position: fixed;
+    width: 80%;
+    background: #222;
+    bottom: -60px;
+    height: 50px;
+    transition: 300ms ease all;
+    color: #ffdc12;
+    border: 3px solid #ffdc12;
+    left: 10%;
+    border-radius: 30px;
+    z-index: 9;
+}
+
+.show-message.show {
+    bottom: 0;
+}
+
+.hide {
+    color: #fff;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 1.3em;
+    text-decoration: none;
+}
