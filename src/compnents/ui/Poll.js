@@ -88,6 +88,8 @@ class Poll extends React.Component {
     } else {
       this.setState({ message: 'You already finish all the votes for today , results saved in LocalStorege' });
     }
+    const a = document.querySelector('.a');
+    this.handleMouseOut(a)
   }
 
   handleChange(e) {
