@@ -7,7 +7,8 @@ class Services {
                 }
             })
             .then(res => res.json())
-            .then(res => res);
+            .then(res => res)
+            .catch(error=>error);
     }
     static debounce(func, wait, immediate) {
         var timeout;

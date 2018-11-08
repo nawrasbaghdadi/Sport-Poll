@@ -7,3 +7,10 @@ it('renders without crashing', () => {
   ReactDOM.render(<ShowMessage />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
+
+it('renders message', () => {
+  const div = document.createElement('div');
+  const msg = 'hello word'
+  ReactDOM.render(<ShowMessage  msg={msg}/>, div);
+  ReactDOM.unmountComponentAtNode(div);
+});
